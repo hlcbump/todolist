@@ -37,7 +37,7 @@ body {
 }
 
 .sidebar.open {
-    width: 25%;
+    width: 10vh;
     transition: width 0.5s, transform 0.3s ease;
 }
 
@@ -123,12 +123,29 @@ body {
     top: 30%;
 }
 
+.popup_top {
+    display: flex;
+    flex-direction: row;
+}
+
+.popup_top #closeBtnPopup {
+    margin-right: 1000px;
+}
+
 .close-popup {
     top: 10%;
     transform: translate(-50%, -50%) scale(0.1);
     opacity: 0;
     visibility: hidden;
 }
+
+.popup #closeBtnPopup {
+    margin-left: 500px;
+    background: none;
+    width: 100px;
+    margin-top: -50px;
+}
+
 
 .popup img {
     width: 100px;
@@ -152,4 +169,20 @@ body {
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.taskList {
+    width: 1000px;
+}
+
+.edit-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 2;
+    display: none;
 }

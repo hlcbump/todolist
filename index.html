@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="shortcut icon" href="./todo_icon_final.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./imgs/todo_icon_final.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +20,10 @@
                 <button type="submit" class="submit" onclick="openPopup()">+ Add Task</button>
                 <div class="popup" id="popup">
                     <form action="./db/insert.php" method="post" id="taskForm" onsubmit="return false;">
-                        <img src="./todo_icon_final.png">
+                        <div class="popup_top">
+                            <img src="./imgs/todo_icon_final.png">
+                            <button type="cancel" onclick="closePopup()" id="closeBtnPopup"><img src="./imgs/red_X.png" alt=""></button>
+                        </div>
                         <p>Task Name</p>
                         <input type="text" placeholder="Task Name" name="task_name" >
                         <p>Description</p>
