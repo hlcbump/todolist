@@ -20,9 +20,11 @@ body {
     overflow-x: hidden;
     padding-top: 60px;
     transition: width 0.5s;
+    padding-top: 100px;
 }
 
 .toggle-btn {
+    font-size: 200%;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -35,7 +37,7 @@ body {
 }
 
 .sidebar.open {
-    width: 10%;
+    width: 25%;
     transition: width 0.5s, transform 0.3s ease;
 }
 

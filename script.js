@@ -6,6 +6,8 @@ var popup = document.getElementById("popup");
 var submitTaskButton = document.getElementById("submitTaskButton");
 var form = document.getElementById("taskForm");
 
+updateTaskList()
+
 function toggleSidebar() {
     if (sidebar.classList.contains("open")) {
         closeSidebar();
@@ -38,6 +40,7 @@ function submitFormAndClosePopup() {
 
     submitFormAjax(form);
     closePopup();
+    updateTaskList();
     return false;
     
 }
@@ -69,4 +72,19 @@ function submitFormAjax(form) {
 function closePopup(){
     popup.classList.remove("open-popup");
     popup.classList.add("close-popup");
+}
+
+function updateTaskList() {
+    var taskListContainer = document.getElementById("taskList");
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "./db/display.php", true);
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 400) {
+            taskListContainer.innerHTML = xhr.responseText;
+            console.error("diplay funcionando");
+        } else {
+            console.error("Erro ao carregar a lista de tarefas.");
+        }
+    };
+    xhr.send();
 }
