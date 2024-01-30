@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #9a9a9a75;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: width 0.5s;
+}
+
+.toggle-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    outline: 2px solid rgba(67, 66, 66, 0.306);
+}
+
+.sidebar.open {
+    width: 10%;
+    transition: width 0.5s, transform 0.3s ease;
+}
+
+.sidebar.closed {
+    width: 0%;
+    transition: width 0.5s, transform 0.3s ease;
+}
+
+.sidebar a {
+    display: inline-block;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+
+.sidebar, #pannel {
+    transition: transform 0.5s ease;
+}
+
+.pannel {
+    padding-left: 5%;
+}
+
+#pannel {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#background {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    height: 100%;
+}
+
+.submit {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    outline: 2px solid rgba(67, 66, 66, 0.306);
+}
+
+.popup {
+    width: 400px;
+    background: #9a9a9a75;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    top: 30%;
+}
+
+.close-popup {
+    top: 10%;
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}

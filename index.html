@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
+    <link rel="shortcut icon" href="./todo_icon_final.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    teste
+    <div class="container">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <div class="sidebar" id="sidebar">
+            <a href="#">Link 1</a>
+        </div>
+    </div>
+    <div class="pannel" id="pannel">
+        <div class="background" id="background">
+            <div class="content" id="content">
+                <button type="submit" class="submit" onclick="openPopup()">+ Add Task</button>
+                <div class="popup" id="popup">
+                    <form action="./db/insert.php" method="post" id="taskForm" onsubmit="return false;">
+                        <img src="./todo_icon_final.png">
+                        <p>Task Name</p>
+                        <input type="text" placeholder="Task Name" name="task_name" >
+                        <p>Description</p>
+                        <input type="text" placeholder="Description" name="task_description">
+                        <p>Time</p>
+                        <input type="number" placeholder="Time" name="task_time">
+                        <button type="button" onclick="submitFormAndClosePopup()" id="submitTaskButton">OK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
