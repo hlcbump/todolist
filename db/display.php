@@ -20,7 +20,8 @@ if ($result->num_rows > 0) {
         </div>";
     }
 } else {
-    echo "Nenhuma tarefa encontrada.";
+    echo "<img src='../imgs/no_work.png' id='no_work'>";
+    echo "No tasks found.";
 }
 
 $connection->close();

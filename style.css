@@ -79,21 +79,27 @@ body {
 #background {
     margin-left: auto;
     margin-right: auto;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .submit {
+    margin-top: 0%;
+    font-size: large;
     border: none;
     background-color: transparent;
     cursor: pointer;
     display: inline-block;
     transition: background-color 0.3s ease;
+    max-width: 120px;
 }
 
 .submit:hover {
@@ -101,8 +107,9 @@ body {
 }
 
 .popup {
-    width: 400px;
-    background: #9a9a9a75;
+    align-items: center;
+    width: 25vw;
+    background: #9a9a9a;
     border-radius: 5px;
     position: absolute;
     top: 10%;
@@ -121,35 +128,42 @@ body {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     top: 30%;
+    left: 53%;
 }
 
 .popup_top {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.popup_top img { 
+    max-width: 100%; /* Ajusta a largura da imagem para 100% da largura do contêiner */
+    max-height: 100%; /* Ajusta a altura da imagem para 100% da altura do contêiner */
+    margin-top: -50px;
+}
+
+.popup_top #bookIcon { 
+    position: relative;
+    width: 36%;
+    margin-left: 40%;
+    margin-right: auto;
 }
 
 .popup_top #closeBtnPopup {
-    margin-right: 1000px;
+    position: relative;
+    margin-top: 0;
+    margin-right: auto;
+    background: none;
 }
+
 
 .close-popup {
     top: 10%;
     transform: translate(-50%, -50%) scale(0.1);
     opacity: 0;
     visibility: hidden;
-}
-
-.popup #closeBtnPopup {
-    margin-left: 500px;
-    background: none;
-    width: 100px;
-    margin-top: -50px;
-}
-
-
-.popup img {
-    width: 100px;
-    margin-top: -50px;
 }
 
 .popup h2{
@@ -171,8 +185,16 @@ body {
     cursor: pointer;
 }
 
-.taskList {
-    width: 1000px;
+#taskList {
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#no_work {
+    width: 300px;
+    height: 200px;
 }
 
 .edit-popup {

@@ -18,10 +18,10 @@
         <div class="background" id="background">
             <div class="content" id="content">
                 <button type="submit" class="submit" onclick="openPopup()">+ Add Task</button>
-                <div class="popup" id="popup">
+                <div class="popup" id="popup"> 
                     <form action="./db/insert.php" method="post" id="taskForm" onsubmit="return false;">
                         <div class="popup_top">
-                            <img src="./imgs/todo_icon_final.png">
+                            <img src="./imgs/todo_icon_final.png" id="bookIcon">
                             <button type="cancel" onclick="closePopup()" id="closeBtnPopup"><img src="./imgs/red_X.png" alt=""></button>
                         </div>
                         <p>Task Name</p>
@@ -33,9 +33,9 @@
                     </form>
                     <button type="button" onclick="submitFormAndClosePopup()" id="submitTaskButton">OK</button>
                 </div>
-            </div>
-            <div id="taskList">
-                
+                <div id="taskList">
+                    
+                </div>
             </div>
         </div>
     </div>
